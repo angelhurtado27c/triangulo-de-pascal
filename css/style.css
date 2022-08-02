@@ -13,6 +13,8 @@ body {
     align-items: center;
 }
 
+.super { vertical-align: super; }
+
 
 
 /* --- --- --- Triangulo --- --- --- */
@@ -20,11 +22,14 @@ body {
     padding: 10px 7px;
     padding-right: 57px;
     position: absolute;
+    top: auto;
+    left: auto;
 }
 
 .row {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .row div {
@@ -98,10 +103,8 @@ body {
 .values {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
-
-.hidden { display: none; }
 
 .values div, .color {
     background: black;
@@ -113,14 +116,16 @@ body {
     cursor: pointer;
 }
 
-.values div { box-shadow: 0 3px 9px #111 }
+.values div {
+    box-shadow: 0 10px 12px black;
+}
 
-#color5 { background: #000; }
-#color4 { background: #fff; }
-#color3 { background: #ffff3f; }
-#color2 { background: #3f6dff; }
-#color1 { background: #3fff6d; }
 #color0 { background: #ff3f6d; }
+#color1 { background: #3fff6d; }
+#color2 { background: #3f6dff; }
+#color3 { background: #ffff3f; }
+#color4 { background: #fff; }
+#color5 { background: #000; }
 
 .color {
     border: none;
@@ -132,3 +137,45 @@ body {
 }
 
 .color .ico { width: 21px; }
+
+
+
+/* --- --- --- Animation Color --- --- --- */
+
+@keyframes appear {
+    0% {
+        transform: translateY(123px) scale(.3);
+        opacity: 0;
+    }
+
+    10% { transform: scale(.8); }
+    30% { opacity: 1; }
+    50% { transform: translateY(-12px) scale(1.1); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes disappear {
+    to {
+        transform: translateY(123px) scale(.3);
+        opacity: 0;
+    }
+}
+
+
+
+/* --- --- --- Animation Color --- --- --- */
+
+@keyframes add-row {
+    from {
+        opacity: 0;
+        transform: translateY(-15px) scaleY(.5);
+    }
+    to { opacity: 1; }
+}
+
+@keyframes delete-row {
+    to {
+        opacity: 0;
+        transform: translateY(-21px) scaleY(.5);
+    }
+}
