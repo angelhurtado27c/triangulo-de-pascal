@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3f3f6d;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* --- --- --- Triangulo --- --- --- */
+.triangle {
+    padding: 10px 7px;
+    padding-right: 57px;
+    position: absolute;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.row div {
+    background: #ff3f6d;
+    height: 70px;
+    margin: -14px -2px 0 -2px;
+    clip-path: polygon(7% 25%, 50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%);
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 70px;
+    max-width: 70px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-out;
+}
+
+#row0 div { margin-top: 0; }
+
+
+
+/* --- --- --- Controles --- --- --- */
+.zoom {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.zoom button, .number-rows {
+    background: #323257;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor:  pointer;
+    transition: all .3s ease;
+}
+
+.zoom button:active {
+    padding: 0;
+    background-color: #53a2be;
+}
+
+.number-rows {
+    cursor: default;
+    background-color: #53a2be;
+}
+
+.number-rows p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ico {
+    cursor: pointer;
+    width: 13px;
+}
+
+
+
+/* --- --- --- Colores --- --- --- */
+.colors {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.values {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden { display: none; }
+
+.values div, .color {
+    background: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.values div { box-shadow: 0 3px 9px #111 }
+
+#color5 { background: #000; }
+#color4 { background: #fff; }
+#color3 { background: #ffff3f; }
+#color2 { background: #3f6dff; }
+#color1 { background: #3fff6d; }
+#color0 { background: #ff3f6d; }
+
+.color {
+    border: none;
+    background-color: #323257;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.color .ico { width: 21px; }
