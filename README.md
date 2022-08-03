@@ -11,6 +11,6 @@ El proyecto se ha utilizado en clases de estadística y matemáticas donde el 72
 <br><br>
 
 ## Instrucciones
-Lo puedes usar desde  o descargando el repositorio y ejecutando el archivo index.html
+Lo puedes usar desde https://angeld-hurtado.github.io/triangulo-de-pascal/ o descargando el repositorio y ejecutando el archivo index.html
 
 <br><br>
